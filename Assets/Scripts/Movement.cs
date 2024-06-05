@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f; 
+    [SerializeField] private float speed = 50f; 
     private Rigidbody m_rb;
 
     // Start is called before the first frame update
