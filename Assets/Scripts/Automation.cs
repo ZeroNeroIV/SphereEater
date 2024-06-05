@@ -13,10 +13,7 @@ public class Automation : MonoBehaviour
         Destroy(gameObject, 15f);
     }
 
-    private void FixedUpdate()
-    {
-        m_rb.AddForce(Vector3.left * (speed * Time.fixedDeltaTime), ForceMode.Impulse);
-    }
+    private void FixedUpdate() => m_rb.AddForce(Vector3.left * (speed * Time.fixedDeltaTime), ForceMode.Impulse);
 
     private void OnTriggerEnter(Collider other)
     {
