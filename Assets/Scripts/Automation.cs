@@ -7,17 +7,15 @@ public class Automation : MonoBehaviour
     [SerializeField] private float speed = 15f;
     private Rigidbody m_rb;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         m_rb = GetComponent<Rigidbody>();
         Destroy(gameObject, 15f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        m_rb.AddForce(Vector3.left * (speed * Time.deltaTime), ForceMode.Impulse);
+        m_rb.AddForce(Vector3.left * (speed * Time.fixedDeltaTime), ForceMode.Impulse);
     }
 
     private void OnTriggerEnter(Collider other)
